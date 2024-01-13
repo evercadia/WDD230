@@ -1,0 +1,75 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Use a Google Font for the body text */
+    background-color: #f4f4f4; /* Light background color */
+    color: #333; /* Dark text color */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff; /* Header background color */
+    color: #fff; /* Header text color */
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+}
+
+
+nav {
+    background-color: #333; /* Navbar background color */
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets from the list items */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Navbar link color */
+    padding: 10px 20px;
+}
+
+main {
+    max-width: 800px; /* Limit the width of the main content */
+    margin: 20px auto; /* Center the main content horizontally */
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #fff; /* Card background color */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for card */
+    padding: 20px;
+}
+
+.card h3 {
+    color: #007bff; /* Card heading color */
+}
+
+ul {
+    padding: 0; /* Remove default padding from the list */
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Footer text color */
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Add additional styles as needed */
