@@ -5,16 +5,16 @@ body, h1, h2, h3, p, ul {
 }
 
 body {
-    font-family: 'Roboto', sans-serif; /* Use a Google Font for the body text */
-    background-color: #f4f4f4; /* Light background color */
-    color: #333; /* Dark text color */
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
     text-align: center;
     padding: 20px;
-    background-color: #007bff; /* Header background color */
-    color: #fff; /* Header text color */
+    background-color: #007bff;
+    color: #fff;
 }
 
 .profile-image {
@@ -22,13 +22,12 @@ header {
     height: 150px;
 }
 
-
 nav {
-    background-color: #333; /* Navbar background color */
+    background-color: #333;
 }
 
 nav ul {
-    list-style-type: none; /* Remove bullets from the list items */
+    list-style-type: none;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,28 +36,28 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #fff; /* Navbar link color */
+    color: #fff;
     padding: 10px 20px;
 }
 
 main {
-    max-width: 800px; /* Limit the width of the main content */
-    margin: 20px auto; /* Center the main content horizontally */
+    max-width: 800px;
+    margin: 20px auto;
 }
 
 .card {
     margin-bottom: 20px;
-    background-color: #fff; /* Card background color */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for card */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
 .card h3 {
-    color: #007bff; /* Card heading color */
+    color: #007bff;
 }
 
 ul {
-    padding: 0; /* Remove default padding from the list */
+    padding: 0;
 }
 
 ul li {
@@ -66,10 +65,30 @@ ul li {
 }
 
 footer {
-    background-color: #333; /* Footer background color */
-    color: #fff; /* Footer text color */
+    background-color: #333;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
 }
 
-/* Add additional styles as needed */
+/* Mobile and Larger view styles for main section */
+main section {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    main section {
+        width: 48%;
+        margin-right: 2%;
+        float: left;
+    }
+
+    /* Clear the float to prevent wrapping issues */
+    main::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}

@@ -1,0 +1,97 @@
+/* larger.css */
+
+/* Larger view styles for main section */
+main section {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+    main section {
+        width: 100%; /* Full width for mobile */
+        float: none; /* Clear float for mobile */
+    }
+}
+
+@media (min-width: 768px) {
+    main section {
+        width: 48%; /* Two columns for larger views, adjust as needed */
+        margin-right: 2%; /* Add a small gap between columns */
+        float: left; /* Float left to create a two-column layout */
+    }
+
+    /* Clear the float to prevent wrapping issues */
+    main::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+/* larger.css */
+
+
+nav ul {
+    display: flex;
+    flex-direction: row; /* Horizontal layout for larger views */
+}
+
+@media (max-width: 767px) {
+    /* Mobile view styles for navigation */
+    nav {
+        background-color: #333; 
+    }
+
+    nav ul {
+        flex-direction: column; 
+    }
+
+    nav a {
+        width: 100%; /* Full width for mobile */
+        box-sizing: border-box;
+        padding: 10px; /* Adjust padding for better touch targets */
+    }
+
+    main section {
+        width: 100%; /* Full width for mobile */
+        float: none; /* Clear float for mobile */
+    }
+
+    header {
+        padding-bottom: 50px; /* Add padding to accommodate mobile navigation */
+    }
+}
+
+/* Larger view styles for main section */
+main section {
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    main section {
+        width: 48%; 
+        margin-right: 2%; 
+        float: left; 
+    }
+
+  
+    main::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+
+nav {
+    background-color: #333; /* Navbar background color for larger views */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; 
+    padding: 10px 20px;
+}
+
+/* Add any other styles for additional elements here */
+
