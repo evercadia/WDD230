@@ -6,13 +6,6 @@ main section {
     margin-bottom: 20px;
 }
 
-@media (max-width: 767px) {
-    main section {
-        width: 100%; /* Full width for mobile */
-        float: none; /* Clear float for mobile */
-    }
-}
-
 @media (min-width: 768px) {
     main section {
         width: 48%; /* Two columns for larger views, adjust as needed */
@@ -27,12 +20,25 @@ main section {
         clear: both;
     }
 }
-/* larger.css */
 
+/* Navigation styles */
+nav {
+    background-color: #333; /* Navbar background color */
+}
 
 nav ul {
+    list-style-type: none; /* Remove bullets from the list items */
     display: flex;
-    flex-direction: row; /* Horizontal layout for larger views */
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff; /* Navbar link color */
+    padding: 10px 20px;
+    box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
@@ -42,18 +48,12 @@ nav ul {
     }
 
     nav ul {
-        flex-direction: column; 
+        flex-direction: column; /* Vertical layout for mobile */
     }
 
     nav a {
         width: 100%; /* Full width for mobile */
-        box-sizing: border-box;
         padding: 10px; /* Adjust padding for better touch targets */
-    }
-
-    main section {
-        width: 100%; /* Full width for mobile */
-        float: none; /* Clear float for mobile */
     }
 
     header {
@@ -61,37 +61,4 @@ nav ul {
     }
 }
 
-/* Larger view styles for main section */
-main section {
-    box-sizing: border-box;
-    margin-bottom: 20px;
-}
-
-@media (min-width: 768px) {
-    main section {
-        width: 48%; 
-        margin-right: 2%; 
-        float: left; 
-    }
-
-  
-    main::after {
-        content: "";
-        display: table;
-        clear: both;
-    }
-}
-
-
-nav {
-    background-color: #333; /* Navbar background color for larger views */
-}
-
-nav a {
-    text-decoration: none;
-    color: #fff; 
-    padding: 10px 20px;
-}
-
 /* Add any other styles for additional elements here */
-
