@@ -1,0 +1,42 @@
+/* dp.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+
+h2 {
+    color: #007bff; /* Blue heading color */
+}
+
+.screenshot-placeholder {
+    border: 1px dashed #999;
+    padding: 10px;
+}
+
+.description {
+    color: #852e2e; /* Gray description text color */
+}
+
+/* Media queries for responsive views */
+@media (max-width: 767px) {
+    .example {
+        max-width: 100%; /* Full width for small screens */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .example {
+        max-width: 48%; /* Two columns for medium screens */
+    }
+}
+
+@media (min-width: 1024px) {
+    .example {
+        max-width: 30%; /* Three columns for large screens */
+    }
+}
