@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css"> 
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Nathan Jellerson - WDD 230 - Web Frontend Development</title>
+    <meta name="description" content="WDD 230 - Web Frontend Development. Nathan Jellerson's course assignment portal. Learn about web development, chamber site plan, and more in Virginia.">
+    <meta name="author" content="Nathan Jellerson">
+   
+<main>
+    <h2>WDD 230: Web Frontend Development</h2>
+    
+    <section class="card">
+        <h3>Learning Activities</h3>
+        <ul>
+            <!-- Learning activities -->
+            <li><a href="#">Week 3 lesson03</a></li>
+            <img src="../../../../../images/Screenshot01.png" alt="lesson03 screen screenshot" class="screenshot">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#">Activity 2</a></li>
+            <li><a href="styles/lesson02/design-principles.html">Design Principles</a></li>
+            <!-- More activities if needed-->
+        </ul>
+    </section>
+    
+
+
+    <!-- Add the link to design.html -->
+    <a href="styles/lesson02/design.html">Link to Design Assignment</a>
+    
+
+
+</main>
+    
+<footer>
+    <p>&copy; <span id="currentYear"></span> Nathan Jellerson [Virginia Flag]</p>
+    <p id="lastModified"></p>
+</footer>
+
+<!-- JavaScript code for dynamic content -->
+<script>
+    // Dynamically set the current year
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // Dynamically set the last modified date
+    document.getElementById('lastModified').textContent = "Last Modified: " + document.lastModified;
+</script>
+</body>
+</html>

@@ -58,6 +58,7 @@ main {
 
 ul {
     padding: 0;
+    margin-bottom: 10px; /* Adjust margin as needed */
 }
 
 ul li {
@@ -92,3 +93,57 @@ main section {
         clear: both;
     }
 }
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1;
+    }
+
+    nav ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
+    }
+}
+
+.menu-toggle {
+    font-size: 24px;
+    transition: transform 0.4s;
+}
+
+.menu-toggle.show {
+    transform: rotate(90deg);
+}
+/* ... (your existing styles) ... */
+
+nav ul li:first-child::before {
+    content: '\2022'; /* Unicode character for a bullet point */
+    color: #007bff;
+    margin-right: 5px;
+}
+
+/* ... (your existing styles) ... */
