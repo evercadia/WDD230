@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lazy Loading Example</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        /* Add some basic styling for the grid */
+  
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: block;
+            object-position: center;
+            object-fit: cover;
+        }
+
+        .blur-load {
+            background-size: cover;
+            background-position: center;
+        }
+        .blur-load.loaded > img{
+            opacity: 1;
+
+        }
+        .blur-load > img {
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+        } 
+
+        
+    </style>
+</head>
+
+<body style="margin: 0">
+    <div class="grid">
+        <div class="blur-load" style="background-image: url(images/crystalball-small.jpg)">
+   
+    <img src="images/crystalball.jpg" loading="lazy">
+</div>
+<div class="blur-load" style="background-image: url(images/evercadia-small.jpg)">
+   
+    <img src="week07/images/evercadia.jpg" loading="lazy">
+</div>
+    <img src="images/hero.png" loading="lazy">
+</div>
+    <img src="images/mask.jpg" loading="lazy">
+</div>
+    <img src="images/poetry.jpg" loading="lazy">
+</div>
+    <img src="images/profile.jpg" loading="lazy">
+</div>
+    <img src="images/sponx.jpg" loading="lazy">
+</div>
+    <img src="images/water.jpg" loading="lazy">
+</div>
+    
+
+    <script>
+       const blurDivs = document.querySelectorAll(".blur-load")
+       blurDivs.forEach(div => {
+        const img = div.querySelector("img")
+
+        function loaded() {
+            div.classList.add('loaded')
+        }
+
+        if (img.complete) {
+            loaded()
+        } else  
+        {
+            img.addEventListener("load", loaded)
+        }
+       })
+    </script>
+</body>
+
+</html>

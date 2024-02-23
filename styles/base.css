@@ -18,8 +18,11 @@ header {
 }
 
 .profile-image {
-    width: 150px;
-    height: 150px;
+    /* Add any specific styles for the image */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /* Add other styles as needed */
 }
 
 nav {
@@ -146,4 +149,5 @@ nav ul li:first-child::before {
     margin-right: 5px;
 }
 
-/* ... (your existing styles) ... */
+
+
