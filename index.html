@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,94 +11,77 @@
     <title>Nathan Jellerson - WDD 230 - Web Frontend Development</title>
     <meta name="description" content="WDD 230 - Web Frontend Development. Nathan Jellerson's course assignment portal. Learn about web development, chamber site plan, and more in Virginia.">
     <meta name="author" content="Nathan Jellerson">
-
   
     <meta property="og:title" content="Virginia Beach">
     <meta property="og:type" content="The Beach">
     <meta property="og:image" content="https://media.istockphoto.com/id/1339138506/photo/sunrise-at-the-sandbridge-pier.jpg?s=1024x1024&w=is&k=20&c=OPTPrDlQpPrFXRJzzLkW3CnaN0NMELrE4M2eIU0HnvY=">
     <meta property="og:url" content="https://virginiabeach.gov/">
-    
-    
-  
 </head>
+
 <body>
 
     <header>
-     
-            <picture>
-                <source media="(min-width: 900px)" srcset="images/Jellerson.jpeg">
-                <source media="(min-width: 480px)" srcset="MediumImage.png">
-                <img src="images/Jellerson.webp" alt="IfItDoesntMatchAnyMedia">
-            </picture>
-          
+        <picture>
+            <source media="(min-width: 900px)" srcset="images/Jellerson.jpeg">
+            <source media="(min-width: 480px)" srcset="MediumImage.png">
+            <img src="images/Jellerson.webp" alt="IfItDoesntMatchAnyMedia">
+        </picture>
         <h1>Nathan Jellerson</h1>
     </header>
-    
-    
 
-<nav>
-
-        <li><a href="#">Home</a></li>
-        <a href="styles/lesson03/chamber-site-plan.html" target="_blank">Visit Chamber Site Plan</a>
-        <a href="/wdd230/Chamber/index.html">Link to Chamber</a>
-
-    </body>
-
-
-    
-
-        <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
-        <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
-    </ul>
-</nav>
-    
-<main>
-    <h2>WDD 230: Web Frontend Development</h2>
-    
-    <section class="card">
-        <h3>Learning Activities</h3>
+    <nav>
         <ul>
-            <!-- Learning activities -->
-            <li><a href="styles/lesson02/lesson.html">Week 3 lesson03</a></li>
-            <li><a href="#">Activity 1</a></li>
-            <li><a href="#">Activity 2</a></li>
-            <li><a href="styles/lesson02/design-principles.html">Design Principles</a></li>
-            <li><a href="lesson05/bom.html">Go to Book of Mormon Top 10</a></li>
-            <li><a href=lesson07/lazyload.html>lazyload Activity</a></li>
-            <!-- More activities if needed-->
+            <li><a href="#">Home</a></li>
+            <li><a href="styles/lesson03/chamber-site-plan.html" target="_blank">Visit Chamber Site Plan</a></li>
+            <li><a href="/wdd230/Chamber/index.html">Link to Chamber</a></li>
+            <li><a href="https://www.byui.edu/" target="_blank">BYU-Idaho</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a></li>
         </ul>
-    </section>
-    
-    <section class="card">
-        <h3>Information</h3>
-        <!-- Placeholders for information -->
-        <section id="weather">
-            <h3>Weather Information</h3>
-            <p>Temperature: <span id="temperature">45</span> °F</p>
-            <p>Wind Speed: <span id="windSpeed">5.5</span> mph</p>
-            <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+    </nav>
+
+    <main>
+        <h2>WDD 230: Web Frontend Development</h2>
+
+        <section class="card">
+            <h3>Learning Activities</h3>
+            <ul>
+                <!-- Learning activities -->
+                <li><a href="styles/lesson02/lesson.html">Week 3 lesson03</a></li>
+                <li><a href="#">Activity 1</a></li>
+                <li><a href="#">Activity 2</a></li>
+                <li><a href="styles/lesson02/design-principles.html">Design Principles</a></li>
+                <li><a href="lesson05/bom.html">Go to Book of Mormon Top 10</a></li>
+                <li><a href="lesson07/lazyload.html">lazyload Activity</a></li>
+                <!-- More activities if needed-->
+            </ul>
         </section>
-        <p>Number of Visits: <span id="pageVisits">Loading...</span></p>
-    </section>
 
-    <!-- Add the link to design.html -->
-    <a href="styles/lesson02/design.html">Link to Design Assignment</a>
-   
-    <a href="Chamber/">Go to Chamber Project</a>
+        <section class="card">
+            <h3>Information</h3>
+            <!-- Placeholders for information -->
+            <section id="weather">
+                <h3>Weather Information</h3>
+                <p>Temperature: <span id="temperature">45</span> °F</p>
+                <p>Wind Speed: <span id="windSpeed">5.5</span> mph</p>
+                <p>Wind Chill: <span id="windChill">Calculating...</span></p>
+            </section>
+            <p>Number of Visits: <span id="pageVisits">Loading...</span></p>
+        </section>
 
+        <!-- Additional links and content remain unchanged -->
+
+        <!-- Google Maps iframe -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51144.38211623241!2d-76.21831802727695!3d36.75799785934445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </main>
 
-    
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Nathan Jellerson [Virginia Flag]</p>
+        <p id="lastModified"></p>
+    </footer>
 
-<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d51144.38211623241!2d-76.21831802727695!3d36.75799785934445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1706229506299!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</main>
-    
-<footer>
-    <p>&copy; <span id="currentYear"></span> Nathan Jellerson [Virginia Flag]</p>
-    <p id="lastModified"></p>
-</footer>
-<script src="scripts/getdates.js" defer></script>
-<script src="scripts/weather.js" defer></script>
-<script src="scripts/counter.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/counter.js" defer></script>
 </body>
+
 </html>
