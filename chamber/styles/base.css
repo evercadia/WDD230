@@ -21,6 +21,14 @@ header {
     box-shadow: 0 0 10px #081e68;
 }
 
+.hero-card {
+    /* Add any specific styles for the image */
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /* Add other styles as needed */
+}
+
 nav a:hover {
     background-color: rgb(240, 241, 238);
 }

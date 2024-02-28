@@ -28,8 +28,13 @@
     <nav>
         <!-- Hero Image -->
         <section id="hero" class="card">
-            <!-- Your hero image content goes here -->
-            <img src="images/hero.png" alt="Hero Image">
+
+            <picture>
+                <source media="(min-width: 900px)" srcset="images/hero.png">
+                <source media="(min-width: 480px)" srcset="images/hero.png">
+                <source media="(min-width: 1025px)" srcset="images/hero.png"> 
+                <img src="images/hero.webp" alt="HeroImage">
+            </picture>
         </section>
 
         <ul>
