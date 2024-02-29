@@ -141,13 +141,3 @@ main section {
 .menu-toggle.show {
     transform: rotate(90deg);
 }
-/* ... (your existing styles) ... */
-
-nav ul li:first-child::before {
-    content: '\2022'; /* Unicode character for a bullet point */
-    color: #007bff;
-    margin-right: 5px;
-}
-
-
-
