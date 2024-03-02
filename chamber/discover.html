@@ -15,91 +15,32 @@
     <title>Discover Virginia Beach</title>
     <link rel="stylesheet" href="styles/base.css">
     <style>
+        /* Your existing styles */
 
-        img {
+        .sidebar-image {
+            position: relative;
+            overflow: hidden;
+            width: calc(50% - 20px); /* Extend by 50 pixels (adjusted for margin) */
+            margin-bottom: 20px;
+        }
+
+        .sidebar-image img {
             width: 100%;
-            aspect-ratio: 1 / 1;
+            height: auto;
             display: block;
             object-position: center;
             object-fit: cover;
         }
 
-        .blur-load {
-            background-size: cover;
-            background-position: center;
-        }
-        .blur-load.loaded > img{
-            opacity: 1;
-        }
-        .blur-load > img {
-            opacity: 0;
-            transition: opacity 200ms ease-in-out;
-        } 
-       
-        .grid {
-            display: grid;
-            grid-template-columns: 1% 2fr;
-        }
-        /* Add some basic styling for the grid */
-  
-        body {
-            display: grid;
-            grid-template-rows: auto 1fr auto; /* Added rows for header, main content, and footer */
-        }
-
-        header {
-            grid-row: 1; /* Header goes in the first row */
+        .sidebar-image p {
+            position: absolute;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.8);
+            width: 100%;
+            margin: 0;
+            padding: 10px;
             text-align: center;
-            padding: 20px;
-            background-color: #007bff;
-            color: #fff;
         }
-
-        main {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* 2 columns for the images */
-            grid-gap: 20px; /* Adjust the gap between images */
-            align-items: center; /* Center items vertically */
-            grid-row: 2; /* Main content goes in the second row */
-            max-width: 800px;
-            margin: 20px auto;
-        }
-
-
-    .sidebar-image {
-        position: relative;
-        overflow: hidden;
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .sidebar-image img {
-        width: 110%;
-        height: auto;
-        display: block;
-        object-position: center;
-        object-fit: cover;
-    }
-
-    .sidebar-image p {
-        position: absolute;
-        bottom: 0;
-        background: rgba(255, 255, 255, 0.8);
-        width: 100%;
-        margin: 0;
-        padding: 10px;
-        text-align: center;
-    }
-
-
-        footer {
-            grid-row: 3; /* Footer goes in the third row */
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-
     </style>
 </head>
 
@@ -107,45 +48,23 @@
     <header>
         <!-- Your header content goes here -->
         <h1>Welcome to Virginia Beach Chamber of Commerce</h1>
+        <!-- You can include your logo or any other header content -->
     </header>
+
     <button id="menu" class="menu-toggle">&#9776;</button>
+
     <nav>
         <!-- Hero Image -->
-        <section id="hero" class="card"></section>
+        <section id="hero" class="card">
+            <!-- Hero content goes here -->
+        </section>
 
         <ul>
             <li><a href="#">Chamber of Commerce</a></li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">Events</a></li>
         </ul>
-        <div class="sidebar">
-            <!-- Sidebar content -->
-            <h1 id="display-message">Welcome to Virginia Beach</h1>
-            <!-- Additional sidebar content -->
-            <script>
-                // Check localStorage for the last visit date
-                var lastVisit = localStorage.getItem("lastVisit");
-                if (!lastVisit) {
-                    // First visit
-                    document.getElementById("display-message").innerText = "Welcome! Let us know if you have any questions.";
-                } else {
-                    var currentDate = new Date();
-                    var daysSinceLastVisit = Math.floor((currentDate - new Date(lastVisit)) / (1000 * 60 * 60 * 24));
-                    if (daysSinceLastVisit === 1) {
-                        // Display message for one day
-                        document.getElementById("display-message").innerText = "You last visited 1 day ago.";
-                    } else if (daysSinceLastVisit < 1) {
-                        // Display message for less than a day
-                        document.getElementById("display-message").innerText = "Back so soon! Awesome!";
-                    } else {
-                        // Display message for more than a day
-                        document.getElementById("display-message").innerText = "You last visited " + daysSinceLastVisit + " days ago.";
-                    }
-                }
-                // Save the current date to localStorage
-                localStorage.setItem("lastVisit", new Date());
-            </script>
-        </div>
+    </nav>
 
         <main>
             <div class="grid-container">
@@ -174,14 +93,22 @@
                             Come on down to Bayville Park and let's play some disc golf. 
                         </p>
                     </div>
-        
                     <div class="sidebar-image">
-                        <img data-src="/images/sandcastles.webp" alt="Caption 4" loading="lazy">
+                        <img data-src="/images/trashmore.webp" alt="Caption 4" loading="lazy">
+                        <p>A gorgeous lake with a hill that overlooks the city. Come down every Friday for family movie night!
+                            Come and grab your blankets and lawn chairs. Popcorn will be provided free of charge. Food trucks will be on-site
+                            to offer a variety of food to host your taste buds. Come down early; the movie starts at 7 pm, and seating will be on a first-come,
+                            first-served basis. Hope to see you there!
+                        </p>
+                    </div>
+                    <div class="sidebar-image">
+                        <img data-src="/images/sandcastles.webp" alt="Caption 5" loading="lazy">
                         <p>April 4-6 The Virginia Beach Melody Club will be hosting their annual sandcastle tournament.
                             Entry fee is $35 per group, and the winner will be crowned victor that Saturday evening.
                             Proceeds will go to autism awareness foundation. Come and enjoy this family fun event! 
                         </p>
                     </div>
+                    
                     <div class="sidebar-image">
                         <img data-src="/images/convention.webp" alt="Caption 6" loading="lazy">
                         <p>Virginia Beach Convention Center. A host of activities on any given weekend. This month is muscle car month. Every weekend the VBCC 
