@@ -6,22 +6,18 @@ body, h1, h2, h3, p, ul {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image: linear-gradient(30deg, #9c4389 12%, transparent 12.5%, transparent 87%, #ec76f5 87.5%, #cd44f7), linear-gradient(150deg, #f7449e 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(30deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(150deg, #444cf7 12%, transparent 12.5%, transparent 87%, #444cf7 87.5%, #444cf7), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777), linear-gradient(60deg, #444cf777 25%, transparent 25.5%, transparent 75%, #444cf777 75%, #444cf777);
+    background-color: #f4f4f4;
+    color: #333;
 }
 
 header {
-    background-color: azure;
-    margin: auto;
-    width: max-content;
-    padding: 50px;
-    font-family: 'Avenir', sans-serif;
-    text-align: center; /* Center align the content */
-    box-shadow: 0 0 10px #081e68;
+    text-align: center;
+    padding: 20px;
+    background-color: #007bff;
+    color: #fff;
 }
 
-.hero-card {
+.profile-image {
     /* Add any specific styles for the image */
     max-width: 100%;
     height: auto;
@@ -29,39 +25,17 @@ header {
     /* Add other styles as needed */
 }
 
-nav a:hover {
-    background-color: rgb(240, 241, 238);
-}
-
-nav a {
-    padding: 35px;
-    text-align: center;
-    color: rgb(90, 74, 74);
-    text-decoration: none;
-}
-
 nav {
-    display: flex;
-    justify-content: space-around;
+    background-color: #333;
 }
-
-/* Hamburger Menu Styles */
-.menu-toggle {
-    display: none;
-    cursor: pointer;
-    color: #fff;
-    font-size: 24px;
-    transition: transform 0.4s;
-    position: fixed;
-    top: 10px;
-    right: 55px; /* Adjust the right offset as needed */
-    z-index: 999;
-}
-
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
+.sidebar-image p {
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    margin: 0;
+    padding: 10px; /* Add padding here */
+    text-align: center;
 }
 
 nav ul {
@@ -72,17 +46,80 @@ nav ul {
     height: 50px;
 }
 
-nav ul li {
+nav a {
+    text-decoration: none;
+    color: #fff;
     padding: 10px 20px;
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
+main {
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+.card {
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card h3 {
+    color: #007bff;
+}
+
+ul {
+    padding: 0;
+    margin-bottom: 10px; /* Adjust margin as needed */
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Mobile and Larger view styles for main section */
+main section {
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+    main section {
+        width: 48%;
+        margin-right: 2%;
+        float: left;
     }
 
+    /* Clear the float to prevent wrapping issues */
+    main::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
     nav ul {
         display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
         position: absolute;
         top: 50px;
         left: 0;
@@ -91,55 +128,25 @@ nav ul li {
         z-index: 1;
     }
 
-    nav ul.show {
-        display: flex;
-        flex-direction: column;
-    }
-
     nav ul li {
+        padding: 10px;
         text-align: center;
     }
 
-    .menu-toggle.show {
-        transform: rotateX(180deg);
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 20px;
     }
 }
 
-
-
-.sidebar {
-    grid-column: 1;
-    background-color: #f5f5f5;
-    padding: 20px;
-    box-shadow: 0 0 10px #081e68;
+.menu-toggle {
+    font-size: 24px;
+    transition: transform 0.4s;
 }
 
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two columns for desktop view */
-    gap: 20px; /* Adjust as needed */
+.menu-toggle.show {
+    transform: rotate(90deg);
 }
-
-/* Lazy-loaded image styling */
-.lazy-image {
-    background-color: #d9c2a3;
-    border: 10px solid #d9c2a3;
-    height: 0;
-    padding-bottom: 75%; /* Maintain a 4:3 aspect ratio */
-    position: relative;
-    overflow: hidden;
-    opacity: 0; /* Initially invisible */
-    transition: opacity 0.5s ease-in-out;
-}
-
-.lazy-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-/* Add any additional styles as needed */

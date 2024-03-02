@@ -5,19 +5,192 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Your meta description goes here.">
-    <meta name="author" content="Your Name">
+    <meta name="author" content="Nathan Jellerson">
     <!-- Social Media Meta Settings -->
-    <meta property="og:title" content="Your Chamber Title">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="path/to/your/image.jpg">
-    <meta property="og:url" content="your-website-url">
-    <title>Your Chamber - Home</title>
+    <meta property="og:title" content="Chamber of Commerce">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:type" content="Virginia Beach">
+    <meta property="og:image" content="https://media.istockphoto.com/id/1339138506/photo/sunrise-at-the-sandbridge-pier.jpg?s=1024x1024&w=is&k=20&c=OPTPrDlQpPrFXRJzzLkW3CnaN0NMELrE4M2eIU0HnvY=">
+    <meta property="og:url" content="https://virginiabeach.gov/">
+    <title>Discover Virginia Beach</title>
     <link rel="stylesheet" href="styles/base.css">
-    <!-- Link coming in the future--> 
+    <style>
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: block;
+            object-position: center;
+            object-fit: cover;
+        }
+
+        .blur-load {
+            background-size: cover;
+            background-position: center;
+        }
+        .blur-load.loaded > img{
+            opacity: 1;
+        }
+        .blur-load > img {
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+        } 
+       
+        .grid {
+            display: grid;
+            grid-template-columns: 1% 2fr;
+        }
+        /* Add some basic styling for the grid */
+  
+        body {
+            display: grid;
+            grid-template-rows: auto 1fr auto; /* Added rows for header, main content, and footer */
+        }
+
+        header {
+            grid-row: 1; /* Header goes in the first row */
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr; /* 2 columns for the images */
+            grid-gap: 20px; /* Adjust the gap between images */
+            align-items: center; /* Center items vertically */
+            grid-row: 2; /* Main content goes in the second row */
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+
+    .sidebar-image {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .sidebar-image img {
+        width: 110%;
+        height: auto;
+        display: block;
+        object-position: center;
+        object-fit: cover;
+    }
+
+    .sidebar-image p {
+        position: absolute;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.8);
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+    }
+
+
+        footer {
+            grid-row: 3; /* Footer goes in the third row */
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    </style>
 </head>
 
+<body>
+    <header>
+        <!-- Your header content goes here -->
+        <h1>Welcome to Virginia Beach Chamber of Commerce</h1>
+    </header>
+    <button id="menu" class="menu-toggle">&#9776;</button>
+    <nav>
+        <!-- Hero Image -->
+        <section id="hero" class="card"></section>
 
+        <ul>
+            <li><a href="#">Chamber of Commerce</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Events</a></li>
+        </ul>
+        <div class="sidebar">
+            <!-- Sidebar content -->
+            <h1 id="display-message">Welcome to Virginia Beach</h1>
+            <!-- Additional sidebar content -->
+            <script>
+                // Check localStorage for the last visit date
+                var lastVisit = localStorage.getItem("lastVisit");
+                if (!lastVisit) {
+                    // First visit
+                    document.getElementById("display-message").innerText = "Welcome! Let us know if you have any questions.";
+                } else {
+                    var currentDate = new Date();
+                    var daysSinceLastVisit = Math.floor((currentDate - new Date(lastVisit)) / (1000 * 60 * 60 * 24));
+                    if (daysSinceLastVisit === 1) {
+                        // Display message for one day
+                        document.getElementById("display-message").innerText = "You last visited 1 day ago.";
+                    } else if (daysSinceLastVisit < 1) {
+                        // Display message for less than a day
+                        document.getElementById("display-message").innerText = "Back so soon! Awesome!";
+                    } else {
+                        // Display message for more than a day
+                        document.getElementById("display-message").innerText = "You last visited " + daysSinceLastVisit + " days ago.";
+                    }
+                }
+                // Save the current date to localStorage
+                localStorage.setItem("lastVisit", new Date());
+            </script>
+        </div>
 
+        <main>
+            <div class="grid-container">
+                <div class="sidebar">
+                    <!-- Sidebar content goes here -->
+                </div>
+                <div class="main-content">
+                    <!-- Main area content, including local photos with lazy loading and captions -->
+                    <div class="sidebar-image">
+                        <img data-src="/images/hero.jpg" alt="Caption 1" loading="lazy">
+                        <p>dazzling sunsets to melt your heart</p>
+                    </div>
+        
+                    <div class="sidebar-image">
+                        <img data-src="/images/neptune.jpg" alt="Caption 2" loading="lazy">
+                        <p>King Neotune rests at the heart of the oceanfront. Selfie contest March 23.
+                            Prizes for the most unique selfie. Come on down and let your creative side run wild. 
+                        </p>
+                    </div>
+        
+                    <div class="sidebar-image">
+                        <img data-src="/images/discgolf.jpeg" alt="Caption 3" loading="lazy">
+                        <p>Adam's rock and roll golf tournament March 2nd and 3rd. $50 entry fee which includes an innova 
+                            disc from Discmania and a T-shirt. Tee off starts at 9 am Saturday for the pro tour.
+                            and 10 am on Sunday for the family disc toss-off. Food vendors on-site. 
+                            Come on down to Bayville Park and let's play some disc golf. 
+                        </p>
+                    </div>
+        
+                    <div class="sidebar-image">
+                        <img data-src="/images/sandcastles.webp" alt="Caption 4" loading="lazy">
+                        <p>April 4-6 The Virginia Beach Melody Club will be hosting their annual sandcastle tournament.
+                            Entry fee is $35 per group, and the winner will be crowned victor that Saturday evening.
+                            Proceeds will go to autism awareness foundation. Come and enjoy this family fun event! 
+                        </p>
+                    </div>
+                    <div class="sidebar-image">
+                        <img data-src="/images/convention.webp" alt="Caption 6" loading="lazy">
+                        <p>Virginia Beach Convention Center. A host of activities on any given weekend. This month is muscle car month. Every weekend the VBCC 
+                            will be hosting different muscle cars and trucks from around the country. Tickets are $15 per person at the door or
+                            $12 at your local Riley Auto Parts store. 
+                </div>
+            </div>
+        </main>
+    </nav>
     <footer>
         <!-- Your footer content goes here -->
         <p>&copy; 2024 Your Chamber. All rights reserved.</p>
@@ -42,6 +215,33 @@
     <script src="scripts/hamberger.js" defer></script>
     <script src="scripts/darkmode.js" defer></script>
     <script src="scripts/windchill.js" defer></script>
+    <script>
+        // Lazy load images
+        document.addEventListener("DOMContentLoaded", function () {
+            var lazyImages = document.querySelectorAll('img[data-src]');
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries, observer) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            var img = entry.target;
+                            img.src = img.dataset.src;
+                            observer.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(function (img) {
+                    observer.observe(img);
+                });
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                lazyImages.forEach(function (img) {
+                    img.src = img.dataset.src;
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
