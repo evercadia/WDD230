@@ -41,6 +41,35 @@
             padding: 10px;
             text-align: center;
         }
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        /* Add some basic styling for the grid */
+  
+
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            display: block;
+            object-position: center;
+            object-fit: cover;
+        }
+
+        .blur-load {
+            background-size: cover;
+            background-position: center;
+        }
+        .blur-load.loaded > img{
+            opacity: 1;
+
+        }
+        .blur-load > img {
+            opacity: 0;
+            transition: opacity 200ms ease-in-out;
+        } 
+
+        
     </style>
 </head>
 
@@ -73,10 +102,13 @@
             </div>
             <div class="main-content">
 
-                <div class="sidebar-image">
-                    <img src="/images/hero.jpg" alt="Caption 1" loading="lazy">
-                    <p>dazzling sunsets to melt your heart</p>
-                </div>
+<div class="sidebar-image">
+    <img src="/images/hero.jpg" alt="Caption 1" loading="lazy">
+    <div class="image-info">
+        <p>dazzling sunsets to melt your heart</p>
+    </div>
+</div>
+
 
                 <div class="sidebar-image">
                     <img src="/images/neptune.jpg" alt="Caption 2" loading="lazy">
