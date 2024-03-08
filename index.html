@@ -19,7 +19,7 @@
 </head>
 
 <body>
-<!-- webp-->
+    <!-- webp-->
     <header>
         <picture>
             <source media="(min-width: 900px)" srcset="images/Jellerson.jpeg">
@@ -45,8 +45,9 @@
     <main>
         <h2>WDD 230: Web Frontend Development</h2>
 
-        <section class="card">
+        <section id="linksContainer" class="card">
             <h3>Learning Activities</h3>
+            <ul id="linksList">
             <ul>
                 <!-- Learning activities -->
                 <li><a href="styles/lesson02/lesson.html">Week 3 lesson03</a></li>
@@ -56,7 +57,7 @@
                 <li><a href="lesson05/bom.html">Go to Book of Mormon Top 10</a></li>
                 <li><a href="lesson07/lazyload.html">lazyload Activity</a></li>
                 <li><a href="lesson08">Lesson 08</a></li>
-                <li><a href="lesson09/proohets.html">Prophets</a></li>
+                <li><a href="lesson09/prophets.html">Prophets</a></li>
                 <!-- More activities if needed-->
             </ul>
         </section>
@@ -84,6 +85,8 @@
         <p id="lastModified"></p>
     </footer>
 
+    <!-- Scripts -->
+    <script src="scripts/links.js" defer></script>
     <script src="scripts/getdates.js" defer></script>
     <script src="scripts/weather.js" defer></script>
     <script src="scripts/counter.js" defer></script>

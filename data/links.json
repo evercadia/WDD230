@@ -1,0 +1,136 @@
+{
+    "lessons": [
+      {
+        "lesson": "01",
+        "links": [
+          {
+            "url": "week01/lesson.html",
+            "title": "Introduction to Web Frontend Development"
+          },
+          {
+            "url": "week01/activity1.html",
+            "title": "Activity 1"
+          },
+          {
+            "url": "week01/activity2.html",
+            "title": "Activity 2"
+          }
+        ]
+      },
+      {
+        "lesson": "02",
+        "links": [
+          {
+            "url": "week02/mediaquery.html",
+            "title": "Media Queries"
+          },
+          {
+            "url": "week02/design-principles.html",
+            "title": "Design Principles Document"
+          }
+        ]
+      },
+      {
+        "lesson": "03",
+        "links": [
+          {
+            "url": "week03/chamber-site-plan.html",
+            "title": "Visit Chamber Site Plan"
+          },
+          {
+            "url": "week03/another-learning-activity.html",
+            "title": "Another Learning Activity"
+          }
+        ]
+      },
+      {
+        "lesson": "04",
+        "links": [
+          {
+            "url": "week04/lesson.html",
+            "title": "Lesson 04"
+          },
+          {
+            "url": "week04/activity1.html",
+            "title": "Activity 1"
+          }
+        ]
+      },
+      {
+        "lesson": "05",
+        "links": [
+          {
+            "url": "week05/bom.html",
+            "title": "Book of Mormon Top 10"
+          },
+          {
+            "url": "week05/activity.html",
+            "title": "Activity"
+          }
+        ]
+      },
+      {
+        "lesson": "06",
+        "links": [
+          {
+            "url": "week06/lesson.html",
+            "title": "Lesson 06"
+          },
+          {
+            "url": "week06/activity.html",
+            "title": "Activity"
+          }
+        ]
+      },
+      {
+        "lesson": "07",
+        "links": [
+          {
+            "url": "week07/lazyload.html",
+            "title": "Lazyload Activity"
+          },
+          {
+            "url": "week07/lesson.html",
+            "title": "Lesson 07"
+          }
+        ]
+      },
+      {
+        "lesson": "08",
+        "links": [
+          {
+            "url": "week08/lesson.html",
+            "title": "Lesson 08"
+          },
+          {
+            "url": "week08/activity.html",
+            "title": "Activity"
+          }
+        ]
+      },
+      {
+        "lesson": "09",
+        "links": [
+          {
+            "url": "week09/prophets.html",
+            "title": "Prophets"
+          },
+          {
+            "url": "week09/activity.html",
+            "title": "Activity"
+          }
+        ]
+      },
+      {
+        "lesson": "10",
+        "links": [
+          {
+            "url": "week10/lesson.html",
+            "title": "Lesson 10"
+          }
+     
+        ]
+      }
+    ]
+  }
+  
