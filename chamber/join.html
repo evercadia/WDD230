@@ -8,11 +8,9 @@
     <link rel="stylesheet" href="styles/larger.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="icon" href="favicon.ico">
-    <title>Join the Virginia Beach Chamber of Commerce</title>
-    <meta name="description" content="Become a member of the Virginia Beach Chamber of Commerce. Fill out our membership form to join a thriving business community.">
-
+    <title>Membership Form</title>
     <meta name="description" content="Membership Form for your organization">
-    <meta name="author" content="Nate Jellerson">
+    <meta name="author" content="Your Name">
     <style>
         /* Add your custom styles here */
         body {
@@ -20,7 +18,7 @@
         }
 
         main {
-            display: flex;
+            display: flex 1fr 1fr 1fr;
             justify-content: center;
             align-items: flex-start;
         }
@@ -79,6 +77,7 @@
         <div class="form-container">
             <form action="thankyou.html" method="get">
                 <section class="card">
+
                     <h3>Applicant Information</h3>
 
                     <label for="firstName">First Name:
@@ -108,21 +107,6 @@
                     <label for="organization">Organization Name:
                         <input type="text" id="organization" name="organization" required>
                     </label>
-                    <!-- Inside the Applicant Information section -->
-                    <label for="address">Address:
-                    <input type="text" id="address" name="address">
-                    </label>
-
-<!-- Inside the Contact Information section -->
-                    <label for="fax">Fax Number:
-                        <input type="tel" id="fax" name="fax">
-                    </label>
-
-<!-- Inside the Organization Information section -->
-                    <label for="website">Organization Website:
-                         <input type="url" id="website" name="website" placeholder="https://www.example.com">
-                    </label>
-
 
                     <label for="membershipBenefits">Choose Membership Benefits:</label>
                     <select id="membershipBenefits" name="membershipBenefits">
@@ -131,6 +115,10 @@
                         <option value="Silver">Silver Membership</option>
                         <option value="Gold">Gold Membership</option>
                     </select>
+
+                    <h3>Organization Description</h3>
+
+                    <textarea id="description" name="description"></textarea>
 
                     <input type="hidden" id="formTimestamp" name="formTimestamp">
                     <button type="submit">Submit</button>
@@ -186,16 +174,13 @@
     </main>
 
     <footer>
-        <!-- Your footer content goes here -->
-        <p>&copy; 2024 Your Chamber. All rights reserved.</p>
-        <p id="currentDateTime"></p>
-
+        <p>&copy; <span id="currentYear"></span> Your Organization</p>
+        <p id="lastModified"></p>
         <address>
             <strong>Contact Information:</strong><br>
             Email: info@yourchamber.com<br>
             Phone: (555) 123-4567
         </address>
-
         <!-- Developer Information -->
         <address>
             <strong>Developed by:</strong><br>
@@ -203,15 +188,6 @@
             WDD 230 Project
         </address>
     </footer>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var formTimestampInput = document.getElementById("formTimestamp");
-            if (formTimestampInput) {
-                formTimestampInput.value = Date.now();
-            }
-        });
-    </script>
 
     <script src="scripts/getdates.js" defer></script>
 </body>
