@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="icon" href="favicon.ico">
+    <title>Membership Form</title>
+    <meta name="description" content="Membership Form for your organization">
+    <meta name="author" content="Your Name">
+    <style>
+        /* Add your custom styles here */
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .form-container,
+        .benefits-container {
+            width: 900px;
+            margin: 50px;
+            padding: 50px; /* Added padding for better spacing */
+        }
+
+        .benefit-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .benefit-item h4 {
+            color: #333;
+            font-size: 1.2em;
+        }
+
+        .bronze {
+            background-color: #e8f806;
+        }
+
+        .silver {
+            background-color: #c0c0c0;
+        }
+
+        .gold {
+            background-color: #ffd700;
+        }
+
+        select,
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Membership Form</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <!-- Add other navigation items as needed -->
+        </ul>
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <form action="thankyou.html" method="get">
+                <section class="card">
+                    <h3>Applicant Information</h3>
+
+                    <label for="firstName">First Name:
+                        <input type="text" id="firstName" name="firstName" required>
+                    </label>
+
+                    <label for="lastName">Last Name:
+                        <input type="text" id="lastName" name="lastName" required>
+                    </label>
+
+                    <label for="position">Title/Position:
+                        <input type="text" id="position" name="position" required pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <h3>Contact Information</h3>
+
+                    <label for="email">Email:
+                        <input type="email" id="email" name="email" required placeholder="example@example.com">
+                    </label>
+
+                    <label for="phone">Mobile Phone:
+                        <input type="tel" id="phone" name="phone" required>
+                    </label>
+
+                    <h3>Organization Information</h3>
+
+                    <label for="organization">Organization Name:
+                        <input type="text" id="organization" name="organization" required>
+                    </label>
+
+                    <label for="membershipBenefits">Choose Membership Benefits:</label>
+                    <select id="membershipBenefits" name="membershipBenefits">
+                        <option value="Non-Profit">Non-Profit (No Fee)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+
+                    <input type="hidden" id="formTimestamp" name="formTimestamp">
+                    <button type="submit">Submit</button>
+                </section>
+            </form>
+        </div>
+
+        <section class="benefits-container card">
+            <h3>Membership Level Benefits</h3>
+
+            <div class="benefit-item">
+                <h4>Non-Profit (No Fee)</h4>
+                <p>Benefits include:</p>
+                <ul>
+                    <li>Access to special non-profit events</li>
+                    <li>Training workshops tailored for non-profits</li>
+                </ul>
+            </div>
+
+            <div class="benefit-item bronze">
+                <h4>Bronze Membership</h4>
+                <p>Benefits include:</p>
+                <ul>
+                    <li>Exclusive access to networking events</li>
+                    <li>Featured in our monthly newsletter</li>
+                    <li>Discounted rates for advertising opportunities</li>
+                </ul>
+            </div>
+
+            <div class="benefit-item silver">
+                <h4>Silver Membership</h4>
+                <p>Benefits include:</p>
+                <ul>
+                    <li>Priority seating at major events</li>
+                    <li>Complimentary tickets to select workshops</li>
+                    <li>Logo placement on our website</li>
+                    <li>Event discounts for your organization's members</li>
+                </ul>
+            </div>
+
+            <div class="benefit-item gold">
+                <h4>Gold Membership</h4>
+                <p>Benefits include:</p>
+                <ul>
+                    <li>VIP access to all events, including private receptions</li>
+                    <li>Exclusive sponsorship opportunities</li>
+                    <li>Featured on our homepage with a dedicated spotlight</li>
+                    <li>Customized promotional campaigns for your organization</li>
+                    <li>Discounted rates for all advertising and marketing services</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Your footer content goes here -->
+        <p>&copy; 2024 Your Chamber. All rights reserved.</p>
+        <p id="currentDateTime"></p>
+
+        <address>
+            <strong>Contact Information:</strong><br>
+            Email: info@yourchamber.com<br>
+            Phone: (555) 123-4567
+        </address>
+
+        <!-- Developer Information -->
+        <address>
+            <strong>Developed by:</strong><br>
+            Nate Jellerson<br>
+            WDD 230 Project
+        </address>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var formTimestampInput = document.getElementById("formTimestamp");
+            if (formTimestampInput) {
+                formTimestampInput.value = Date.now();
+            }
+        });
+    </script>
+
+    <script src="scripts/getdates.js" defer></script>
+</body>
+
+</html>
