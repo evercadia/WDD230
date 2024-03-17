@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Cavalier Resort",
+        "address": "555 Ocean View Blvd, Suite 202, Virginia Beach, VA 23451",
+        "phone": "(757) 555-1212",
+        "website": "https://www.cavalierresortvb.com/",
+        "image": "images.png",
+        "membership_level": "Gold",
+        "other_info": "Luxury resort located in Virginia Beach."
+      },
+      {
+        "name": "Beach Side Social",
+        "address": "123 Beachside Ave, Virginia Beach, VA 23451",
+        "phone": "(757) 555-2323",
+        "website": "https://beachsidesocialvb.com/",
+        "image": "baylocal.jpg",
+        "membership_level": "Silver",
+        "other_info": "Beachfront entertainment venue with games and dining."
+      },
+      {
+        "name": "Baladi Cafe",
+        "address": "123 Mediterranean Way, Virginia Beach, VA 23462",
+        "phone": "(757) 555-3434",
+        "website": "https://baladicafe.com/",
+        "image": "graped.jpg",
+        "membership_level": "Bronze",
+        "other_info": "Mediterranean cafe located in Hilltop West Shopping Center."
+      },
+      {
+        "name": "Bayside Rec Center",
+        "address": "4001 First Court, Virginia Beach, VA 23455",
+        "phone": "(757) 555-4545",
+        "website": "https://parks.virginiabeach.gov/rec-centers/bayside",
+        "image": "vb.png",
+        "membership_level": "Non-Profit",
+        "other_info": "Recreational center offering various activities and facilities."
+      },
+      {
+        "name": "The Deep Sea Fisher",
+        "address": "123 Winston Salem Rd, Virginia Beach, VA 23451",
+        "phone": "(757) 555-5656",
+        "website": "https://www.e-fishinsea.com/",
+        "image": "fish.jpg",
+        "membership_level": "Bronze",
+        "other_info": "Charter boats and deep sea fishing excursions."
+      },
+      {
+        "name": "Escape Room",
+        "address": "5423 Cleveland Street, Virginia Beach, VA 23462",
+        "phone": "(757) 555-7878",
+        "website": "https://escape2win.com/",
+        "image": "escape2win-logo.webp",
+        "membership_level": "Silver",
+        "other_info": "Exciting escape room experience for groups."
+      },
+      {
+        "name": "Go Kayak",
+        "address": "322 Piedmont Cir, Virginia Beach, VA 23455",
+        "phone": "(757) 555-9898",
+        "website": "https://www.gokayakvb.com/",
+        "image": "kayak.jpg",
+        "membership_level": "Bronze",
+        "other_info": "Offers dolphin tours via kayak."
+      }
+    ]
+  }
+  

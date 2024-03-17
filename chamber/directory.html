@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your meta description goes here.">
+    <meta name="author" content="Nathan Jellerson">
+    <!-- Social Media Meta Settings -->
+    <meta property="og:title" content="Chamber of Commerce">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:type" content="Virginia Beach">
+    <meta property="og:image" content="https://media.istockphoto.com/id/1339138506/photo/sunrise-at-the-sandbridge-pier.jpg?s=1024x1024&w=is&k=20&c=OPTPrDlQpPrFXRJzzLkW3CnaN0NMELrE4M2eIU0HnvY=">
+    <meta property="og:url" content="https://virginiabeach.gov/">
+    <title>Chamber of Commerce</title>
+    <link rel="stylesheet" href="styles/base.css">
+    <style>
+        /* Define styles for grid and list view */
+        .member-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .member-card {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Member Directory</h1>
+        <!-- Toggle button for grid and list view -->
+        <button onclick="toggleView()">Toggle View</button>
+    </header>
+
+    <div id="members" class="member-container"></div>
+
+    <footer>
+        <!-- Your footer content goes here -->
+        <p>&copy; 2024 Your Chamber. All rights reserved.</p>
+        <p id="currentDateTime"></p>
+
+        <address>
+            <strong>Contact Information:</strong><br>
+            Email: info@yourchamber.com<br>
+            Phone: (555) 123-4567
+        </address>
+
+        <!-- Developer Information -->
+        <address>
+            <strong>Developed by:</strong><br>
+            Nate Jellerson<br>
+            WDD 230 Project
+        </address>
+    </footer>
+
+    <!-- Optional: Include scripts or additional resources -->
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/hamberger.js" defer></script>
+    <script src="scripts/darkmode.js" defer></script>
+    <script src="scripts/windchill.js" defer></script>
+    <script src="data/members.json" defer></script>
+    <script src="scripts/directory.js" defer></script> <!-- Include your JavaScript file -->
+</body>
+
+</html>
