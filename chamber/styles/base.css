@@ -150,3 +150,8 @@ main section {
 .menu-toggle.show {
     transform: rotate(90deg);
 }
+/* Banner Styles */
+#banner {
+    background: #eee;
+    padding: 10px; 
+  }
