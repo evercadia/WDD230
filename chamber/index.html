@@ -14,7 +14,6 @@
     <meta property="og:url" content="https://virginiabeach.gov/">
     <title>Chamber of Commerce</title>
     <link rel="stylesheet" href="styles/base.css">
- 
 </head>
 
 <body>
@@ -22,7 +21,7 @@
     <header>
         <!-- Your header content goes here -->
         <h1>Welcome to Virginia Beach Chamber of Commerce</h1>
-  
+
         <!-- You can include your logo or any other header content -->
     </header>
     <button id="menu" class="menu-toggle">&#9776;</button>
@@ -33,7 +32,7 @@
             <picture>
                 <source media="(min-width: 900px)" srcset="images/hero.png">
                 <source media="(min-width: 480px)" srcset="images/hero.png">
-                <source media="(min-width: 1025px)" srcset="images/hero.png"> 
+                <source media="(min-width: 1025px)" srcset="images/hero.png">
                 <img src="images/hero.webp" alt="HeroImage">
             </picture>
         </section>
@@ -54,19 +53,14 @@
         <section class="sidebar">
             <h1>activities</h1>
         </section>
-
-
-
-
-
-
     </nav>
 
     <main>
         <div id="banner" class="banner">
             <p>Join us for the Chamber of Commerce meet and greet on Wednesday at 7:00 p.m.</p>
             <button id="closeBtn" class="close-btn">&times;</button>
-        </div><!-- Call to Action -->
+        </div>
+        <!-- Call to Action -->
         <!-- Current Events Section -->
         <section id="events">
             <!-- Your current events content goes here -->
@@ -74,7 +68,7 @@
             <div class="event-box">
                 <p>Events: Join us for the Annual Beach Cleanup on Saturday, May 15th. Help keep our beaches pristine!</p>
                 <p>Summer Concert Series every Friday night at the Boardwalk Pavilion. Enjoy live music and good company!
-                    Food trucks will be available on the boardwalk. Sandcastle tournaments.. 
+                    Food trucks will be available on the boardwalk. Sandcastle tournaments..
                 </p>
             </div>
             <section id="spotlights">
@@ -88,7 +82,7 @@
                         dine with the best food around.
                     </p>
                 </div>
-                
+
                 <div class="spotlight">
                     <h3>Mount Trashmore</h3>
                     <img src="images/mount.jpg" alt="Company 2 Logo">
@@ -102,8 +96,6 @@
             </section>
         </section>
 
-
-        
         <div id="weather-card">
             <h2>Weather Information</h2>
             <p id="temperature">Temperature: Loading...</p>
@@ -111,19 +103,19 @@
             <img id="weather-icon" src="#" alt="Weather Icon">
             <div id="forecast"></div>
         </div>
-        
+
         <script>
             const apiKey = '000aa9a74f8859e9a19b39a1923c85dc';
             const city = 'Virginia Beach';
             const countryCode = 'US';
             const currentUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
             const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city},${countryCode}&appid=${apiKey}&units=metric`;
-        
+
             const currentIcon = document.getElementById('weather-icon');
             const currentTemp = document.getElementById('temperature');
             const currentDesc = document.getElementById('description');
             const forecastContainer = document.getElementById('forecast');
-        
+
             fetch(currentUrl)
                 .then(response => response.json())
                 .then(data => {
@@ -136,6 +128,7 @@
                 .catch(error => {
                     console.error('Error fetching current weather data:', error);
                 });
+
         
             fetch(forecastUrl)
                 .then(response => response.json())
