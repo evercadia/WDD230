@@ -28,6 +28,7 @@ header {
 nav {
     background-color: #333;
 }
+
 .sidebar-image p {
     position: absolute;
     bottom: 0;
@@ -38,6 +39,7 @@ nav {
     text-align: center;
 }
 
+/* Corrected order */
 nav ul {
     list-style-type: none;
     display: flex;
@@ -150,8 +152,9 @@ main section {
 .menu-toggle.show {
     transform: rotate(90deg);
 }
+
 /* Banner Styles */
 #banner {
     background: #eee;
     padding: 10px; 
-  }
+}
