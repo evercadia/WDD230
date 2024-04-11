@@ -1,0 +1,65 @@
+{
+    "rentals": [
+      {
+        "type": "Metro Scooter",
+        "max_persons": 1,
+        "reservation_half_day": 20,
+        "reservation_full_day": 30,
+        "walk_in_half_day": 25,
+        "walk_in_full_day": 35,
+        "image": "images/honda.jpg",
+        "alt": "Honda Metro Scooter"
+      },
+      {
+        "type": "Honda Dio Scooter",
+        "max_persons": 2,
+        "reservation_half_day": 30,
+        "reservation_full_day": 40,
+        "walk_in_half_day": 35,
+        "walk_in_full_day": 45,
+        "image": "images/dio.webp",
+        "alt": "Honda Dio Scooter"
+      },
+      {
+        "type": "Honda PCX150 Scooter",
+        "max_persons": 2,
+        "reservation_half_day": 40,
+        "reservation_full_day": 50,
+        "walk_in_half_day": 45,
+        "walk_in_full_day": 55,
+        "image": "images/pcx.webp",
+        "alt": "Honda PCX150 Scooter"
+      },
+      {
+        "type": "Honda Pioneer ATV",
+        "max_persons": 4,
+        "reservation_half_day": 50,
+        "reservation_full_day": 70,
+        "walk_in_half_day": 60,
+        "walk_in_full_day": 80,
+        "image": "images/pioneer.jpg",
+        "alt": "Honda Pioneer ATV"
+      },
+      {
+        "type": "Jeep Wrangler - 4 door with A/C",
+        "max_persons": 5,
+        "reservation_half_day": 70,
+        "reservation_full_day": 100,
+        "walk_in_half_day": 85,
+        "walk_in_full_day": 125,
+        "image": "images/jeep.jpg",
+        "alt": "Jeep Wrangler - 4 door with A/C"
+      },
+      {
+        "type": "Jeep Wrangler - 2 door",
+        "max_persons": 4,
+        "reservation_half_day": 60,
+        "reservation_full_day": 85,
+        "walk_in_half_day": 70,
+        "walk_in_full_day": 90,
+        "image": "images/jeep2.jpg",
+        "alt": "Jeep Wrangler - 2 door"
+      }
+    ]
+  }
+  

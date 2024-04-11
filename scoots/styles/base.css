@@ -1,0 +1,338 @@
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
+
+/* Header styles */
+header {
+    background-color: #d8afc4;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+}
+
+/* Reservation CTA styles */
+#reservation-cta {
+    margin-top: 50px;
+}
+
+#reservation-cta h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #ffcc00;
+}
+
+/* Summary section styles */
+#summary {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.rental-summary {
+    display: flex;
+    justify-content: space-around;
+}
+
+.rental-type {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 30%;
+}
+
+.rental-type h3 {
+    font-size: 24px;
+}
+
+.rental-type p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Social media section styles */
+#social-media {
+    background-color: #ceabbf;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #ffd700;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Image styles */
+/* Image styles */
+img {
+    transition: transform 0.3s ease; /* Transition effect */
+}
+
+img:hover {
+    transform: scale(1.2); /* Increase the scale on hover */
+}
+/* Table styles */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #0f0f0f;
+}
+
+th, td {
+    border: 1px solid #7c9caa; /* Add borders to table header and cells */
+    padding: 8px; /* Add padding for better spacing */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #0f0f0f; /* Add background color to table header */
+}
+
+.rental-info {
+    width: 80%;
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align all text inside the section */
+}
+
+.rental-info h2 {
+    text-align: center;
+}
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+    .rental-summary {
+        flex-direction: column;
+    }
+
+    .rental-type {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
+/* Apply CSS Grid layout to the content section */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Apply Flexbox layout to the rental-agreement and reservation-form sections */
+.rental-agreement,
+.reservation-form {
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style the form fields */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, 
+form select {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #ffd700;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #ffcc00;
+}
+
+/* Style the footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 14px;
+}
+/* Define the style for the navigation box */
+.navigation-box {
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Align content to the center */
+    margin: 20px auto; /* Center the box horizontally */
+}
+
+/* Style the links inside the navigation box */
+.navigation-box h2 a {
+    display: inline-block; /* Ensure links appear in a row */
+    margin: 0 10px; /* Add spacing between links */
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Set link color */
+}
+
+.navigation-box h2 a:hover {
+    color: #ffd700; /* Change link color on hover */
+}
+
+.contact-info {
+    max-width: 800px; /* Set a maximum width for the contact info box */
+    margin: 0 auto; /* Center the box horizontally */
+    display: flex;
+    flex-wrap: wrap; /* Allow content to wrap to the next line */
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center align vertically */
+    flex-direction: column; /* Stack items vertically */
+    background-color: rgba(170, 59, 59, 0.1); 
+    margin: 20px 0;
+    padding: 20px;
+    height: 75vh; /* Make the container full height of the viewport */
+}
+
+.location-description {
+    width: 100%; /* Full width */
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px; /* Add some margin */
+}
+
+
+
+.location-description p {
+    margin-bottom: 15px;
+    word-wrap: break-word; /* Allow words to break to the next line if necessary */
+}
+
+.contact-details {
+    flex: 1 1 30%; /* Allow the contact details box to grow and shrink */
+    max-width: 200px; /* Limit the width of the contact details box */
+    list-style: none;
+    padding: 0;
+}
+
+.contact-details li {
+    margin-bottom: 10px;
+}
+/* Styling for image gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-container {
+    width: 45%; /* Adjust as needed */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rentals</title>
+   
+  <!-- Add your CSS link here -->
+<link rel="stylesheet" href="styles/base.css">
+<style>
+/* Add this CSS to your styles/base.css file */
+
+body {
+    background-color: #000; /* Set background color of the body to black */
+    color: #fff; /* Set text color to white */
+}
+
+.rental-info {
+    width: 80%;
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 20px;
+    background-color: #f2f2f2; /* Set background color of the rental-info section */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center-align all text inside the section */
+    color: #000; /* Set text color inside the rental-info section to black */
+}
+
+.rental-info h2 {
+    margin-top: 0; /* Remove default margin */
+}
+.rental-info table {
+    background-color: #cfe8cf; /* Soft light green pastel for the table background */
+}
+
+/* Add additional styles for other sections as needed */
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid black; /* Add a black border around the table */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Add borders to table header and cells */
+    padding: 8px; /* Add padding for better spacing */
+    text-align: left; /* Align text to the left */
+}
+
+th {
+    background-color: #f2f2f2; /* Add background color to table header */
+}
+
+</style>
+
+</head>
+<body>
+    <body>
+        <div class="navigation-box">
+            <h2>
+                <a href="index.html" class="btn">Home</a>
+                <a href="reservations.html" class="btn">Reservations</a>
+                <a href="contact.html" class="btn">Contact</a>
+            </h2>
+        </div>
+    
+    
+    <section class="rental-info">
+        <h2>Rentals</h2>
+        
+        <table id="rentals-table">
+            <thead>
+                <tr>
+                    <th>Rental Type</th>
+                    <th>Max. Persons</th>
+                    <th>Reservation Half Day (3 hrs)</th>
+                    <th>Reservation Full Day</th>
+                    <th>Walk-In Half Day (3 hrs)</th>
+                    <th>Walk-In Full Day</th>
+                    <th>Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Rental data will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </section>
+
+    <script>
+        fetch('data/rentals.json')
+            .then(response => response.json())
+            .then(data => {
+                const rentalsTable = document.getElementById('rentals-table');
+
+                data.rentals.forEach(rental => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${rental.type}</td>
+                        <td>${rental.max_persons}</td>
+                        <td>$${rental.reservation_half_day}</td>
+                        <td>$${rental.reservation_full_day}</td>
+                        <td>$${rental.walk_in_half_day}</td>
+                        <td>$${rental.walk_in_full_day}</td>
+                        <td><img src="${rental.image}" alt="${rental.alt}" width="100" height="75"></td>
+                    `;
+                    rentalsTable.querySelector('tbody').appendChild(row);
+                });
+            })
+            .catch(error => console.error('Error fetching rental data:', error));
+    </script>
+</body>
+</html>

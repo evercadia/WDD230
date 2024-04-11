@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoots - Home</title>
+    <!-- Add your CSS link here -->
+    <link rel="stylesheet" href="styles/base.css">
+</head>
+<body>
+
+<header>
+    <!-- Closeable message with today's high temperature -->
+    <div id="temp-max-message" class="message" style="display: none;">
+        <span id="close-message" onclick="closeMessage()">X</span>
+        <p>Today's high temperature: <span id="temp-max"></span>°C</p>
+    </div>
+
+    <!-- Navigation links -->
+    <nav>
+        <h1>Welcome to Scoots</h1>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="rentals.html">Rentals</a></li>
+            <li><a href="reservations.html">Reservations</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Heading -->
+
+    <!-- Weather Information -->
+    <div id="weather-info">
+        <h2>Weather Information</h2>
+        <div id="current-weather"></div>
+        <div id="next-day-forecast"></div>
+    </div>
+
+    <!-- Rental Reservation Action -->
+    <div id="reservation-cta">
+        <h2>Make a Rental Reservation</h2>
+        <p>Explore Cozumel with Scoots!</p>
+        <a href="reservations.html" class="button">Reserve Now</a>
+    </div>
+
+    <!-- Information Section -->
+    <section id="information">
+        <h2>Discover Cozumel</h2>
+        <div class="image-gallery">
+            <div class="row">
+                <div class="image-container">
+                    <img src="images/beach.jpg" alt="Cozumel Beach">
+                </div>
+                <div class="image-container">
+                    <img src="images/island.jpg" alt="Cozumel">
+                </div>
+            </div>
+            <div class="row">
+                <div class="image-container">
+                    <img src="images/reef.jpg" alt="Coral reef">
+                </div>
+                <div class="image-container">
+                    <img src="images/food.jpg" alt="Tacos">
+                </div>
+                <div class="image-container">
+                    <img src="images/art.jpg" alt="art">
+                </div>
+                <div class="image-container">
+                    <img src="images/temple.jpg" alt="temple">
+                </div>
+            </div>
+        </div>
+        <p>Explore the breathtaking beauty of Cozumel's beaches, reefs, and attractions. Plan your adventure today!</p>
+        
+        <!-- Cozumel Information Table -->
+        <table>
+            <caption>Cozumel Island Information</caption>
+            <tr>
+                <th>Explore Underwater Wonders</th>
+                <td>Nestled in the crystal-clear waters of the Caribbean Sea, Cozumel beckons adventurers and sun-seekers alike to its shores. Renowned for its vibrant marine life, pristine beaches, and rich cultural heritage, this island paradise offers an unforgettable escape for travelers of all ages.</td>
+            </tr>
+            <tr>
+                <th>Experience Island Adventures</th>
+                <td>From thrilling ATV excursions through lush jungles to tranquil beachside yoga sessions at sunset, Cozumel offers a myriad of adventures to suit every taste. Zip-line through the canopy, explore ancient Mayan ruins, or simply relax on the powdery white sands of the island's idyllic beaches.</td>
+            </tr>
+            <tr>
+                <th>Indulge in Local Delights</th>
+                <td>Savor the flavors of authentic Mexican cuisine as you feast on fresh seafood ceviche, savory street tacos, and zesty margaritas infused with local ingredients. Immerse yourself in the vibrant culture of Cozumel as you stroll through colorful markets, where artisans showcase their handmade crafts and traditional artwork.</td>
+            </tr>
+            <tr>
+                <th>Create Unforgettable Memories</th>
+                <td>Whether you're embarking on a romantic getaway, a family vacation, or a solo adventure, Cozumel promises to captivate your senses and ignite your spirit of adventure. With its breathtaking beauty, warm hospitality, and endless opportunities for exploration, Cozumel invites you to create memories that will last a lifetime.</td>
+            </tr>
+        </table>
+    </section>
+</header>
+
+<section class="content">
+    <section class="rental-summary">
+        <div class="rental-type">
+            <h3>Motor Scooters</h3>
+            <p>Explore the island with our modern and fuel-efficient scooters.</p>
+            <!-- Placeholder for image -->
+            <img src="images/vintage.jpg" alt="Scooter Image">
+        </div>
+        <div class="rental-type">
+            <h3>Jeeps</h3>
+            <p>Experience the freedom of the open road with our rugged and reliable jeeps.</p>
+            <!-- Placeholder for image -->
+            <img src="images/awesome.jpg" alt="Jeep Image">
+        </div>
+        <div class="rental-type">
+            <h3>Side-by-Side ATVs</h3>
+            <p>Get off the beaten path and discover hidden gems with our adventurous ATVs.</p>
+            <!-- Placeholder for image -->
+            <img src="images/atv.jpg" alt="ATV Image">
+        </div>
+    </section>
+</section>
+
+<section id="social-media">
+    <h2>Follow Us</h2>
+    <!-- Add social media links here -->
+    <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+    </ul>
+</section>
+
+<section id="map">
+    <h2>Location</h2>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1o2bCDS8t6LqGiqz1pyxJtwyU6Uc&hl=en&ehbc=2E312F" width="100%" height="480" loading="lazy"></iframe>
+</section>
+
+<footer>
+    <p>&copy; 2024 Scoots. All rights reserved.</p>
+    <!-- Add contact information here -->
+    <p>Contact us: 123-456-7890 | info@scoots.com</p>
+</footer>
+
+<script src="script/weather.js"></script>
+
+</body>
+</html>
