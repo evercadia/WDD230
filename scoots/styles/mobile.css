@@ -1,0 +1,12 @@
+/* Example mobile styles */
+@media screen and (max-width: 768px) {
+    /* Styles for screens up to 768px wide (typically tablets and smaller devices) */
+}
+
+@media screen and (max-width: 480px) {
+    /* Styles for screens up to 480px wide (typically smartphones) */
+}
+
+@media screen and (orientation: landscape) {
+    /* Styles for landscape orientation */
+}
